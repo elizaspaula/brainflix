@@ -3,6 +3,10 @@
 @use "../../styles/partials/variables" as *;
 @use "../../styles/partials/typography" as *;
 
+* {
+  font-family: $font;
+}
+
 .logo {
   padding: 1rem;
 
