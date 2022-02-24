@@ -1,0 +1,38 @@
+@use "../../styles/partials/mixins" as *;
+@use "../../styles/partials/fonts" as *;
+@use "../../styles/partials/variables" as *;
+@use "../../styles/partials/typography" as *;
+
+.logo {
+  padding: 1rem;
+
+  &__image {
+    width: 100%;
+    padding-bottom: 0.5rem;
+  }
+
+  &__logo {
+    width: 7.5rem;
+    max-width: 7.5rem;
+    max-height: 1.5625rem;
+    background-color: $primary-color-background;
+  }
+
+  &__search {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    padding-bottom: 1rem;
+  }
+
+  &__input {
+    border-style: none;
+    border: 1px solid $secondary-color-neutral;
+    background-color: $secondary-color-background;
+    height: 32px;
+    padding: 18px;
+    width: 85%;
+    border-radius: 0.25rem;
+  }
+}

@@ -1,0 +1,23 @@
+@use "../../styles/partials/mixins" as *;
+@use "../../styles/partials/fonts" as *;
+@use "../../styles/partials/variables" as *;
+@use "../../styles/partials/typography" as *;
+
+//TO-DO: jow to add the icon?
+
+.logo__upload {
+  .btn {
+    border-style: none;
+    background-color: $primary-color-btn;
+    color: $primary-color-background;
+    width: 100%;
+    border-radius: 0.25rem;
+    padding: 0.875rem;
+    text-decoration: none;
+    text-transform: uppercase;
+  }
+
+  &:hover {
+    background-color: $secondary-color-btn-hover;
+  }
+}

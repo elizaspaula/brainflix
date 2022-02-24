@@ -13,3 +13,18 @@
     @content;
   }
 }
+
+//Avatar Mobile
+@mixin avatarMobile {
+  height: 2.25rem;
+  width: 2.25rem;
+  border-radius: 50%;
+  object-fit: cover;
+}
+
+@mixin avatar {
+  height: 3rem;
+  width: 3rem;
+  border-radius: 50%;
+  object-fit: cover;
+}

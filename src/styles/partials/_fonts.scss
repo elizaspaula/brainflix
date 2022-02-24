@@ -1,39 +1,35 @@
 $font: "Avenir Next", Arial, sans-serif;
-$regular: 400;
+$normal: 400;
 $bold: 700;
 
 @font-face {
-  font-family: "AvenirNext LT Pro";
-  src: url("AvenirNextLTPro-Bold.woff2") format("woff2"),
-    url("AvenirNextLTPro-Bold.woff") format("woff");
-  font-weight: bold;
+  font-family: $font;
+  src: url("../../assets/font/AvenirNextLTPro-Bold.ttf") format("truetype");
+  font-weight: $bold;
   font-style: normal;
   font-display: swap;
 }
 
 @font-face {
-  font-family: "AvenirNext LT Pro";
-  src: url("AvenirNextLTPro-Regular.woff2") format("woff2"),
-    url("AvenirNextLTPro-Regular.woff") format("woff");
-  font-weight: normal;
+  font-family: $font;
+  src: url("../../assets/font/AvenirNextLTPro-Regular.ttf") format("truetype");
+  font-weight: $normal;
   font-style: normal;
   font-display: swap;
 }
 
 @font-face {
-  font-family: "AvenirNext LT Pro";
-  src: url("AvenirNextLTPro-Regular.woff2") format("woff2"),
-    url("AvenirNextLTPro-Regular.woff") format("woff");
-  font-weight: normal;
+  font-family: $font;
+  src: url("../../assets/font/AvenirNextLTPro-Regular_1.ttf") format("truetype");
+  font-weight: $normal;
   font-style: normal;
   font-display: swap;
 }
 
 @font-face {
-  font-family: "AvenirNext LT Pro";
-  src: url("AvenirNextLTPro-Bold.woff2") format("woff2"),
-    url("AvenirNextLTPro-Bold.woff") format("woff");
-  font-weight: bold;
+  font-family: $font;
+  src: url("../../assets/font/AvenirNextLTPro-Bold_1.ttf") format("truetype");
+  font-weight: $bold;
   font-style: normal;
   font-display: swap;
 }
