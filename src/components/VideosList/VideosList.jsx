@@ -1,44 +1,23 @@
 import "./VideosList.scss";
 
-function VideoList() {
+function VideoList({ videos, setSelectVideoId }) {
   return (
     <ul className="videos__list">
-      <li className="videos__item">
-        <video className="videos__source" poster="#"></video>
-        <div className="videos__info">
-          <h3 className="videos__title">
-            Become A Travel Pro in One Easy Lesson
-          </h3>
-          <p className="videos__owner">Todd Welch</p>
-        </div>
-      </li>
-      <li className="videos__item">
-        <video className="videos__source" poster="#"></video>
-        <div className="videos__info">
-          <h3 className="videos__title">
-            Become A Travel Pro in One Easy Lesson
-          </h3>
-          <p className="videos__owner">Todd Welch</p>
-        </div>
-      </li>
-      <li className="videos__item">
-        <video className="videos__source" poster="#"></video>
-        <div className="videos__info">
-          <h3 className="videos__title">
-            Become A Travel Pro in One Easy Lesson
-          </h3>
-          <p className="videos__owner">Todd Welch</p>
-        </div>
-      </li>
-      <li className="videos__item">
-        <video className="videos__source" poster="#"></video>
-        <div className="videos__info">
-          <h3 className="videos__title">
-            Become A Travel Pro in One Easy Lesson
-          </h3>
-          <p className="videos__owner">Todd Welch</p>
-        </div>
-      </li>
+      {videos.map((video) => (
+        <li
+          className="videos__item"
+          key={video.id}
+          onClick={() => {
+            setSelectVideoId(video.id);
+          }}
+        >
+          <video className="videos__image" poster={video.image}></video>
+          <div className="videos__info">
+            <h3 className="videos__title">{video.title}</h3>
+            <p className="videos__owner">{video.channel}</p>
+          </div>
+        </li>
+      ))}
     </ul>
   );
 }
