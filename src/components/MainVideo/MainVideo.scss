@@ -13,5 +13,49 @@
   &__title {
     color: $primary-color;
     padding-bottom: 1rem;
+    text-align: left;
+  }
+
+  &__info {
+    border-top: 1px solid $secondary-color-neutral;
+    border-bottom: 1px solid $secondary-color-neutral;
+  }
+
+  &__subtitle {
+    display: flex;
+    align-items: center;
+    padding: 0.5rem 0;
+    color: $primary-color;
+  }
+
+  &__ownership,
+  &__date {
+    flex-grow: 1;
+    text-align: left;
+  }
+  &__wrapper {
+    display: flex;
+  }
+
+  &__view {
+    padding-right: 0.625rem;
+  }
+
+  &__like {
+    padding-right: 1.4375rem;
+  }
+
+  &__numbers,
+  &__date {
+    color: $primary-color-neutral;
+  }
+
+  &__description {
+    padding: 1rem 0;
+    text-align: left;
+  }
+
+  &__comments {
+    text-align: left;
   }
 }

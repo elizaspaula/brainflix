@@ -1,0 +1,62 @@
+@use "../../styles/partials/mixins" as *;
+@use "../../styles/partials/fonts" as *;
+@use "../../styles/partials/variables" as *;
+@use "../../styles/partials/typography" as *;
+
+* {
+  font-family: $font;
+}
+
+.conversations {
+  display: flex;
+
+  &__avatar {
+    width: 15%;
+    padding-top: 2.5625rem;
+    padding-right: 0.875rem;
+  }
+
+  &__group {
+    display: flex;
+    flex-direction: column;
+    width: 85%;
+  }
+
+  &__label {
+    text-align: left;
+    color: $primary-color-neutral;
+    text-transform: uppercase;
+    padding-top: 1rem;
+    padding-bottom: 0.4rem;
+  }
+
+  &__message {
+    display: block;
+    font-family: "Avenir Next", Arial, sans-serif;
+    font-size: 0.8125rem;
+    color: $secondary-color;
+    background-color: $secondary-color-background;
+    border-radius: 0.25rem;
+    padding: 0.75rem;
+    border: 1px solid $secondary-color-neutral;
+    transition: background-color 0.5s ease-out;
+  }
+
+  &__btn {
+    padding-top: 0.875rem;
+  }
+  &__button {
+    border-style: none;
+    background-color: $primary-color-btn;
+    color: $primary-color-background;
+    width: 100%;
+    border-radius: 0.25rem;
+    padding: 0.875rem;
+    text-decoration: none;
+    text-transform: uppercase;
+
+    &:hover {
+      background-color: $secondary-color-btn-hover;
+    }
+  }
+}
