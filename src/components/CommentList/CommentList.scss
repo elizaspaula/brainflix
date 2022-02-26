@@ -5,12 +5,12 @@
 
 .comments {
   padding-top: 1rem;
-  border-bottom: 0.0625rem solid $secondary-color-neutral;
+  @include divider-bottom;
 
   &__content {
     display: flex;
     justify-content: center;
-    border-top: 0.0625rem solid $secondary-color-neutral;
+    @include divider-top;
   }
 
   &__avatar {
