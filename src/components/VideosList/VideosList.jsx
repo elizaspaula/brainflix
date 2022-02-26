@@ -3,6 +3,8 @@ import "./VideosList.scss";
 function VideoList({ videos, setSelectVideoId }) {
   return (
     <ul className="videos">
+      <li className="videos__label">next videos </li>
+
       {videos.map((video) => (
         <li
           className="videos__item"
@@ -11,13 +13,17 @@ function VideoList({ videos, setSelectVideoId }) {
             setSelectVideoId(video.id);
           }}
         >
-          <div className="test">
-            <img className="videos__image" src={video.image} />
+          <div className="videos__group">
+            <img
+              className="videos__image"
+              src={video.image}
+              alt={video.title}
+            />
           </div>
 
           <div className="videos__info">
-            <p className="videos__title bold">{video.title}</p>
-            <p className="videos__owner">{video.channel}</p>
+            <p className="videos__title">{video.title}</p>
+            <p className="videos__channel">{video.channel}</p>
           </div>
         </li>
       ))}

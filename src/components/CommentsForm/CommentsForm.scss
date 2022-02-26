@@ -11,8 +11,7 @@
   display: flex;
 
   &__avatar {
-    width: 15%;
-    padding-top: 2.5625rem;
+    padding-top: 2.75rem;
     padding-right: 0.875rem;
   }
 
@@ -26,8 +25,10 @@
     text-align: left;
     color: $primary-color-neutral;
     text-transform: uppercase;
-    padding-top: 1rem;
+    padding-top: 1.5rem;
     padding-bottom: 0.4rem;
+    font-size: 0.8125rem;
+    font-weight: $demi;
   }
 
   &__message {
@@ -45,18 +46,13 @@
   &__btn {
     padding-top: 0.875rem;
   }
-  &__button {
-    border-style: none;
-    background-color: $primary-color-btn;
-    color: $primary-color-background;
-    width: 100%;
-    border-radius: 0.25rem;
-    padding: 0.875rem;
-    text-decoration: none;
-    text-transform: uppercase;
 
-    &:hover {
-      background-color: $secondary-color-btn-hover;
-    }
+  &__icon {
+    flex-basis: 1rem;
+  }
+
+  &__content {
+    flex-grow: 1;
+    font-weight: $demi;
   }
 }

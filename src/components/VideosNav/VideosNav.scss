@@ -30,13 +30,35 @@
     padding-bottom: 1rem;
   }
 
+  &__text {
+    border: 1px solid $secondary-color-neutral;
+    background-color: $secondary-color-background;
+    display: flex;
+    justify-content: center;
+    align-content: center;
+    align-items: center;
+    width: 85%;
+  }
+
   &__input {
     border-style: none;
-    border: 1px solid $secondary-color-neutral;
     background-color: $secondary-color-background;
     height: 32px;
     padding: 18px;
     width: 85%;
     border-radius: 0.25rem;
+
+    &:focus {
+      outline: none;
+    }
+  }
+
+  &__icon {
+    flex-basis: 1rem;
+  }
+
+  &__content {
+    flex-grow: 1;
+    font-weight: $demi;
   }
 }

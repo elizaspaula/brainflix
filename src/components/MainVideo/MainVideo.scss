@@ -8,17 +8,19 @@
 }
 
 .video {
-  padding: 1rem 1.5rem;
+  padding: 0 1rem;
 
   &__title {
     color: $primary-color;
-    padding-bottom: 1rem;
+    padding: 1.5rem 0;
     text-align: left;
+    font-weight: $demi;
   }
 
   &__info {
-    border-top: 1px solid $secondary-color-neutral;
-    border-bottom: 1px solid $secondary-color-neutral;
+    @include divider-top;
+    @include divider-bottom;
+    padding: 0.5rem 1rem;
   }
 
   &__subtitle {
@@ -28,25 +30,36 @@
     color: $primary-color;
   }
 
-  &__ownership,
+  &__channel,
   &__date {
     flex-grow: 1;
     text-align: left;
   }
+
+  &__channel {
+    font-weight: $demi;
+  }
+
   &__wrapper {
     display: flex;
+    padding-right: 1.875rem;
   }
 
   &__view {
-    padding-right: 0.625rem;
+    padding-right: 0.5rem;
   }
 
   &__like {
-    padding-right: 1.4375rem;
+    padding-right: 0.75rem;
   }
 
   &__numbers,
   &__date {
+    color: $primary-color-neutral;
+  }
+
+  &__numbers-likes {
+    padding-right: 0.625rem;
     color: $primary-color-neutral;
   }
 
@@ -57,5 +70,12 @@
 
   &__comments {
     text-align: left;
+    font-weight: $demi;
+  }
+}
+
+.player {
+  &__video {
+    width: 100%;
   }
 }

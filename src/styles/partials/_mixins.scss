@@ -28,3 +28,11 @@
   border-radius: 50%;
   object-fit: cover;
 }
+
+@mixin divider-top {
+  border-top: 1px solid $secondary-color-neutral;
+}
+
+@mixin divider-bottom {
+  border-bottom: 1px solid $secondary-color-neutral;
+}
