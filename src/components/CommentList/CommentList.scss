@@ -16,14 +16,26 @@
   &__avatar {
     padding-right: 0.625rem;
     padding-top: 0.875rem;
+
+    @include tablet {
+      padding-right: 1rem;
+    }
   }
   .avatar {
     background-color: $secondary-color-neutral;
     @include avatarMobile;
+
+    @include tablet {
+      @include avatar;
+    }
   }
 
   &__info {
     max-width: 85%;
+
+    @include tablet {
+      max-width: 95%;
+    }
 
     &__wrapper {
       display: flex;
