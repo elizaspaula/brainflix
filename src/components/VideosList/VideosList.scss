@@ -1,0 +1,40 @@
+@use "../../styles/partials/mixins" as *;
+@use "../../styles/partials/fonts" as *;
+@use "../../styles/partials/variables" as *;
+@use "../../styles/partials/typography" as *;
+
+* {
+  font-family: $font;
+}
+
+.videos {
+  padding: 0 1rem;
+
+  &__item {
+    display: flex;
+    padding: 1rem 0;
+    align-items: flex-start;
+    justify-content: flex-start;
+    gap: 0.625rem;
+  }
+
+  &__image {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+
+  &__info {
+    text-align: left;
+  }
+
+  .bold {
+    font-weight: $bold;
+  }
+
+  .test {
+    width: 5rem;
+    height: 5rem;
+    overflow: hidden;
+  }
+}

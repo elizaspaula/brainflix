@@ -7,11 +7,15 @@ import videoDetails from "./data/video-details.json";
 import videos from "./data/videos.json";
 
 function App() {
+  //Create useState Hook and initialize videoID
   const [selectVideoId, setSelectVideoId] = React.useState(
     "84e96018-4022-434e-80bf-000ce4cd12b8"
   );
 
+  //Filter the videos data to remove it from VideosList
   const videoList = videos.filter((video) => video.id !== selectVideoId);
+
+  //Find the video details id and pass to VideoList
   const video = videoDetails.find((video) => video.id === selectVideoId);
 
   return (
