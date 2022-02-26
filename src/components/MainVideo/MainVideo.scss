@@ -10,17 +10,48 @@
 .video {
   padding: 0 1rem;
 
+  @include tablet {
+    padding: 0 1.5rem;
+  }
+
   &__title {
     color: $primary-color;
     padding: 1.5rem 0;
     text-align: left;
     font-weight: $demi;
+
+    @include tablet {
+      font-weight: $bold;
+      padding-top: 2.25rem;
+      padding-bottom: 0.5rem;
+    }
   }
 
   &__info {
     @include divider-top;
     @include divider-bottom;
     padding: 0.5rem 1rem;
+
+    @include tablet {
+      display: flex;
+      border-top: none;
+      justify-content: space-between;
+      padding: 0;
+    }
+  }
+
+  .responsible {
+    display: none;
+
+    @include tablet {
+      display: flex;
+    }
+  }
+
+  .tablet {
+    @include tablet {
+      display: none;
+    }
   }
 
   &__subtitle {
@@ -36,8 +67,17 @@
     text-align: left;
   }
 
+  &__date {
+    @include tablet {
+      display: none;
+    }
+  }
+
   &__channel {
     font-weight: $demi;
+    @include tablet {
+      padding-right: 1rem;
+    }
   }
 
   &__wrapper {
@@ -66,6 +106,10 @@
   &__description {
     padding: 1rem 0;
     text-align: left;
+
+    @include tablet {
+      padding-bottom: 2.25rem;
+    }
   }
 
   &__comments {

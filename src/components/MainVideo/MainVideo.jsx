@@ -18,7 +18,12 @@ function MainVideo({ videoDetail }) {
           <div className="video__info">
             <div className="video__subtitle">
               <h3 className="video__channel">By {videoDetail.channel}</h3>
-              <div className="video__wrapper">
+
+              <p className="video__date responsible">
+                {new Date(videoDetail.timestamp).toLocaleDateString()}
+              </p>
+
+              <div className="video__wrapper tablet ">
                 <img className="video__view" src={viewIcon} alt="views" />
                 <p className="video__numbers">{videoDetail.views}</p>
               </div>
@@ -27,6 +32,12 @@ function MainVideo({ videoDetail }) {
               <p className="video__date">
                 {new Date(videoDetail.timestamp).toLocaleDateString()}
               </p>
+
+              <div className="video__wrapper responsible">
+                <img className="video__view" src={viewIcon} alt="views" />
+                <p className="video__numbers">{videoDetail.views}</p>
+              </div>
+
               <div className="video__wrapper">
                 <img className="video__like" src={likeIcon} alt="likes" />
                 <p className="video__numbers-likes">{videoDetail.likes}</p>
