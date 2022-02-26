@@ -10,9 +10,19 @@
 .logo {
   padding: 1rem;
 
+  @include tablet {
+    display: flex;
+    align-items: center;
+    gap: 1.875rem;
+  }
+
   &__image {
     width: 100%;
     padding-bottom: 1rem;
+
+    @include tablet {
+      width: 25%;
+    }
   }
 
   &__logo {
@@ -28,6 +38,10 @@
     align-items: center;
     justify-content: space-between;
     padding-bottom: 1rem;
+
+    @include tablet {
+      flex: 1;
+    }
   }
 
   &__text {
@@ -38,6 +52,25 @@
     align-content: center;
     align-items: center;
     width: 85%;
+    border-radius: 0.25rem;
+
+    @include tablet {
+      width: 55%;
+    }
+  }
+
+  .tablet {
+    display: none;
+
+    @include tablet {
+      display: flex;
+    }
+  }
+
+  .mobile {
+    @include tablet {
+      display: none;
+    }
   }
 
   &__input {
@@ -60,5 +93,11 @@
   &__content {
     flex-grow: 1;
     font-weight: $demi;
+  }
+
+  &__avatar {
+    @include tablet {
+      @include avatar;
+    }
   }
 }

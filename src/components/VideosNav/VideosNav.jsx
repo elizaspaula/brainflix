@@ -25,12 +25,20 @@ function VideosNav() {
             autoFocus
           />
         </div>
+        <div className="logo__button tablet">
+          <Button>
+            <img className="logo__icon" src={uploadIcon} alt="upload icon" />
+            <p className="logo__content">upload</p>
+          </Button>
+        </div>
         <Avatar />
       </div>
-      <Button>
-        <img className="logo__icon" src={uploadIcon} alt="upload icon" />
-        <p className="logo__content">upload</p>
-      </Button>
+      <div className="logo__button mobile">
+        <Button>
+          <img className="logo__icon" src={uploadIcon} alt="upload icon" />
+          <p className="logo__content">upload</p>
+        </Button>
+      </div>
     </header>
   );
 }
