@@ -9,4 +9,8 @@
 
 .logo__avatar {
   @include avatarMobile;
+
+  @include tablet {
+    @include avatar;
+  }
 }

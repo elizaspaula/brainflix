@@ -11,24 +11,40 @@
   display: flex;
 
   &__avatar {
-    padding-top: 2.75rem;
+    padding-top: 1.125rem;
     padding-right: 0.875rem;
+
+    @include tablet {
+      padding-top: 3.4375rem;
+    }
   }
 
   &__group {
-    display: flex;
-    flex-direction: column;
     width: 85%;
+    text-align: left;
+
+    @include tablet {
+      flex: 1;
+    }
   }
 
   &__label {
-    text-align: left;
     color: $primary-color-neutral;
     text-transform: uppercase;
-    padding-top: 1.5rem;
-    padding-bottom: 0.4rem;
+    padding-bottom: 0.3125rem;
     font-size: 0.8125rem;
     font-weight: $demi;
+
+    @include tablet {
+      padding-top: 2.25rem;
+    }
+  }
+
+  &__wrapper {
+    @include tablet {
+      display: flex;
+      gap: 1rem;
+    }
   }
 
   &__message {
@@ -41,10 +57,21 @@
     padding: 0.75rem;
     border: 1px solid $secondary-color-neutral;
     transition: background-color 0.5s ease-out;
+    width: 100%;
+
+    @include tablet {
+      width: 70%;
+      height: 2.5rem;
+      flex: 1;
+    }
   }
 
   &__btn {
     padding-top: 0.875rem;
+
+    @include tablet {
+      padding: 0;
+    }
   }
 
   &__icon {
