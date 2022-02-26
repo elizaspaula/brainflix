@@ -3,6 +3,44 @@
 @use "../../styles/partials/variables" as *;
 @use "../../styles/partials/typography" as *;
 
-.comments__list {
-  padding: 1rem;
+.comments {
+  padding-top: 1rem;
+  border-bottom: 0.0625rem solid $secondary-color-neutral;
+
+  &__content {
+    display: flex;
+    justify-content: center;
+    border-top: 0.0625rem solid $secondary-color-neutral;
+  }
+
+  &__avatar {
+    padding-right: 0.625rem;
+    padding-top: 0.875rem;
+  }
+  .avatar {
+    background-color: $secondary-color-neutral;
+    @include avatarMobile;
+  }
+
+  &__info {
+    &__wrapper {
+      display: flex;
+      justify-content: space-between;
+    }
+
+    &__name {
+      padding: 1rem 0 0.5rem 0;
+      font-weight: $demi;
+    }
+
+    &__date {
+      padding: 1rem 0 0.5rem 0;
+      color: $primary-color-neutral;
+    }
+
+    &__text {
+      text-align: left;
+      padding-bottom: 1rem;
+    }
+  }
 }
