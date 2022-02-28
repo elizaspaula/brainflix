@@ -1,0 +1,127 @@
+@use "../../styles/partials/mixins" as *;
+@use "../../styles/partials/fonts" as *;
+@use "../../styles/partials/variables" as *;
+@use "../../styles/partials/typography" as *;
+
+* {
+  font-family: $font;
+}
+
+.video {
+  padding: 0 1rem;
+
+  @include tablet {
+    padding: 0 1.5rem;
+  }
+
+  @include desktop {
+    padding-left: 2rem;
+    padding-right: 0;
+    width: 80%;
+    margin: 0 auto;
+  }
+
+  &__title {
+    color: $primary-color;
+    padding: 1.5rem 0;
+    text-align: left;
+    font-weight: $demi;
+
+    @include tablet {
+      font-weight: $bold;
+      padding-top: 2.25rem;
+      padding-bottom: 0.5rem;
+    }
+  }
+
+  &__info {
+    @include divider-top;
+    @include divider-bottom;
+    padding: 0.5rem 1rem;
+
+    @include tablet {
+      display: flex;
+      border-top: none;
+      justify-content: space-between;
+      padding: 0;
+    }
+  }
+
+  .responsible {
+    display: none;
+
+    @include tablet {
+      display: flex;
+    }
+  }
+
+  .tablet {
+    @include tablet {
+      display: none;
+    }
+  }
+
+  &__subtitle {
+    display: flex;
+    align-items: center;
+    padding: 0.5rem 0;
+    color: $primary-color;
+  }
+
+  &__channel,
+  &__date {
+    flex-grow: 1;
+    text-align: left;
+  }
+
+  &__date {
+    @include tablet {
+      display: none;
+    }
+  }
+
+  &__channel {
+    font-weight: $demi;
+    @include tablet {
+      padding-right: 1rem;
+    }
+  }
+
+  &__wrapper {
+    display: flex;
+    padding-right: 1.875rem;
+  }
+
+  &__view {
+    padding-right: 0.5rem;
+  }
+
+  &__like {
+    padding-right: 0.75rem;
+  }
+
+  &__numbers,
+  &__date {
+    color: $primary-color-neutral;
+  }
+
+  &__numbers-likes {
+    padding-right: 0.625rem;
+    color: $primary-color-neutral;
+  }
+
+  &__description {
+    padding: 1rem 0;
+    text-align: left;
+
+    @include tablet {
+      padding-bottom: 2.25rem;
+    }
+  }
+
+  &__comments {
+    text-align: left;
+    font-weight: $demi;
+    padding-bottom: 1.5rem;
+  }
+}

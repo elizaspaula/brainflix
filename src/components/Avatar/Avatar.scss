@@ -1,0 +1,16 @@
+@use "../../styles/partials/mixins" as *;
+@use "../../styles/partials/fonts" as *;
+@use "../../styles/partials/variables" as *;
+@use "../../styles/partials/typography" as *;
+
+* {
+  font-family: $font;
+}
+
+.logo__avatar {
+  @include avatarMobile;
+
+  @include tablet {
+    @include avatar;
+  }
+}

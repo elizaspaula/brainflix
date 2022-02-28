@@ -1,0 +1,99 @@
+@use "../../styles/partials/mixins" as *;
+@use "../../styles/partials/fonts" as *;
+@use "../../styles/partials/variables" as *;
+@use "../../styles/partials/typography" as *;
+
+* {
+  font-family: $font;
+}
+
+.conversations {
+  display: flex;
+
+  &__avatar {
+    padding-top: 1.125rem;
+    padding-right: 0.875rem;
+
+    @include tablet {
+      padding-top: 3.4375rem;
+      padding-right: 1rem;
+      padding-left: 1.25rem;
+    }
+
+    @include desktop {
+      padding-top: 1.125rem;
+    }
+  }
+
+  &__group {
+    width: 85%;
+    text-align: left;
+
+    @include tablet {
+      flex: 1;
+    }
+  }
+
+  &__label {
+    color: $primary-color-neutral;
+    text-transform: uppercase;
+    padding-bottom: 0.3125rem;
+    font-size: 0.8125rem;
+    font-weight: $demi;
+
+    @include tablet {
+      padding-top: 2.25rem;
+    }
+
+    @include desktop {
+      padding-top: 0;
+    }
+  }
+
+  &__wrapper {
+    @include tablet {
+      display: flex;
+      gap: 1rem;
+    }
+  }
+
+  &__message {
+    display: block;
+    font-family: "Avenir Next", Arial, sans-serif;
+    font-size: 0.8125rem;
+    color: $secondary-color;
+    background-color: $secondary-color-background;
+    border-radius: 0.25rem;
+    padding: 0.75rem;
+    border: 1px solid $secondary-color-neutral;
+    transition: background-color 0.5s ease-out;
+    width: 100%;
+
+    @include tablet {
+      width: 70%;
+      height: 2.5rem;
+      flex: 1;
+    }
+  }
+
+  &__btn {
+    padding-top: 0.875rem;
+
+    @include tablet {
+      padding: 0;
+    }
+
+    @include desktop {
+      padding-right: 1rem;
+    }
+  }
+
+  &__icon {
+    flex-basis: 1rem;
+  }
+
+  &__content {
+    flex-grow: 1;
+    font-weight: $demi;
+  }
+}

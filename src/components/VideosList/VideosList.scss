@@ -1,0 +1,84 @@
+@use "../../styles/partials/mixins" as *;
+@use "../../styles/partials/fonts" as *;
+@use "../../styles/partials/variables" as *;
+@use "../../styles/partials/typography" as *;
+
+* {
+  font-family: $font;
+}
+
+.videos {
+  padding: 0 1rem;
+  padding-bottom: 1rem;
+
+  @include tablet {
+    padding: 0 2.5rem;
+    padding-bottom: 1.5rem;
+  }
+
+  @include desktop {
+    border-left: 1px solid $secondary-color-neutral;
+  }
+
+  &__label {
+    padding-top: 1.5rem;
+    padding-bottom: 1rem;
+    text-align: left;
+    text-transform: uppercase;
+    font-size: 0.8125rem;
+    font-weight: $demi;
+    color: $primary-color-neutral;
+
+    @include tablet {
+      padding-top: 2.25rem;
+      padding-bottom: 1.5rem;
+    }
+  }
+
+  &__item {
+    display: flex;
+    padding: 0.5rem 0;
+    align-items: center;
+    justify-content: flex-start;
+    gap: 0.625rem;
+  }
+
+  &__image {
+    width: 100%;
+    height: 100%;
+    border-radius: 0.25rem;
+    object-fit: cover;
+    transition: 0.5s ease-in-out;
+
+    &:hover {
+      opacity: 0.5;
+    }
+  }
+
+  &__info {
+    text-align: left;
+    display: flex;
+    flex-direction: column;
+    gap: 0.25rem;
+    cursor: pointer;
+    width: 80%;
+
+    @include tablet {
+      width: 25%;
+    }
+
+    @include desktop {
+      width: 55%;
+    }
+  }
+
+  &__title {
+    font-weight: $demi;
+  }
+
+  &__group {
+    width: 7rem;
+    height: 4rem;
+    cursor: pointer;
+  }
+}

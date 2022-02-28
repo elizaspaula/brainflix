@@ -1,0 +1,64 @@
+@use "../../styles/partials/mixins" as *;
+@use "../../styles/partials/fonts" as *;
+@use "../../styles/partials/variables" as *;
+@use "../../styles/partials/typography" as *;
+
+.comments {
+  padding-top: 1rem;
+  @include divider-bottom;
+
+  @include desktop {
+    border-bottom: none;
+  }
+
+  &__content {
+    display: flex;
+    justify-content: center;
+    @include divider-top;
+
+    @include desktop {
+      padding-right: 1rem;
+    }
+  }
+
+  &__avatar {
+    padding-right: 0.625rem;
+    padding-top: 0.875rem;
+
+    @include tablet {
+      padding-right: 1.125rem;
+    }
+  }
+  .avatar {
+    background-color: $secondary-color-neutral;
+    @include avatarMobile;
+
+    @include tablet {
+      @include avatar;
+    }
+  }
+
+  &__info {
+    max-width: 85%;
+
+    &__wrapper {
+      display: flex;
+      justify-content: space-between;
+    }
+
+    &__name {
+      padding: 1rem 0 0.5rem 0;
+      font-weight: $demi;
+    }
+
+    &__date {
+      padding: 1rem 0 0.5rem 0;
+      color: $primary-color-neutral;
+    }
+
+    &__text {
+      text-align: left;
+      padding-bottom: 1rem;
+    }
+  }
+}

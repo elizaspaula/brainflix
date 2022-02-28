@@ -1,0 +1,116 @@
+@use "../../styles/partials/mixins" as *;
+@use "../../styles/partials/fonts" as *;
+@use "../../styles/partials/variables" as *;
+@use "../../styles/partials/typography" as *;
+
+* {
+  font-family: $font;
+}
+
+.logo {
+  padding: 1rem;
+
+  @include tablet {
+    display: flex;
+    align-items: center;
+    gap: 1.875rem;
+    padding: 1rem 1.5rem;
+  }
+
+  @include desktop {
+    gap: 19.8rem;
+    width: 1280px;
+    margin: 0 auto;
+  }
+
+  &__image {
+    width: 100%;
+    padding-bottom: 1rem;
+
+    @include tablet {
+      width: 25%;
+      padding-bottom: 0;
+    }
+  }
+
+  &__logo {
+    width: 7.5rem;
+    max-width: 7.5rem;
+    max-height: 1.5625rem;
+    background-color: $primary-color-background;
+  }
+
+  &__search {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    padding-bottom: 1rem;
+
+    @include tablet {
+      flex: 1;
+      padding-bottom: 0;
+    }
+
+    @include desktop {
+      flex: auto;
+    }
+  }
+
+  &__text {
+    border: 1px solid $secondary-color-neutral;
+    background-color: $secondary-color-background;
+    display: flex;
+    justify-content: center;
+    align-content: center;
+    align-items: center;
+    width: 85%;
+    border-radius: 0.25rem;
+
+    @include tablet {
+      width: 55%;
+    }
+  }
+
+  .tablet {
+    display: none;
+
+    @include tablet {
+      display: flex;
+    }
+  }
+
+  .mobile {
+    @include tablet {
+      display: none;
+    }
+  }
+
+  &__input {
+    border-style: none;
+    background-color: $secondary-color-background;
+    height: 32px;
+    padding: 18px;
+    width: 85%;
+    border-radius: 0.25rem;
+
+    &:focus {
+      outline: none;
+    }
+  }
+
+  &__icon {
+    flex-basis: 1rem;
+  }
+
+  &__content {
+    flex-grow: 1;
+    font-weight: $demi;
+  }
+
+  &__avatar {
+    @include tablet {
+      @include avatar;
+    }
+  }
+}
