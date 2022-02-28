@@ -7,10 +7,18 @@
   padding-top: 1rem;
   @include divider-bottom;
 
+  @include desktop {
+    border-bottom: none;
+  }
+
   &__content {
     display: flex;
     justify-content: center;
     @include divider-top;
+
+    @include desktop {
+      padding-right: 1rem;
+    }
   }
 
   &__avatar {
@@ -18,7 +26,7 @@
     padding-top: 0.875rem;
 
     @include tablet {
-      padding-right: 1rem;
+      padding-right: 1.125rem;
     }
   }
   .avatar {
@@ -32,10 +40,6 @@
 
   &__info {
     max-width: 85%;
-
-    @include tablet {
-      max-width: 95%;
-    }
 
     &__wrapper {
       display: flex;

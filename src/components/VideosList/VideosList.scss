@@ -12,8 +12,12 @@
   padding-bottom: 1rem;
 
   @include tablet {
-    padding: 0 1.5rem;
+    padding: 0 2.5rem;
     padding-bottom: 1.5rem;
+  }
+
+  @include desktop {
+    border-left: 1px solid $secondary-color-neutral;
   }
 
   &__label {
@@ -61,6 +65,10 @@
 
     @include tablet {
       width: 25%;
+    }
+
+    @include desktop {
+      width: 55%;
     }
   }
 

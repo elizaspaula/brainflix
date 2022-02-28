@@ -9,9 +9,6 @@ import CommentList from "../CommentList/CommentList";
 function MainVideo({ videoDetail }) {
   return (
     <>
-      <div className="player">
-        <video className="player__video" poster={videoDetail.image}></video>
-      </div>
       <main className="video">
         <div className="video__group">
           <h1 className="video__title">{videoDetail.title}</h1>

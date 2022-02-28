@@ -1,0 +1,16 @@
+@use "../../styles/partials/mixins" as *;
+@use "../../styles/partials/fonts" as *;
+@use "../../styles/partials/variables" as *;
+@use "../../styles/partials/typography" as *;
+
+* {
+  font-family: $font;
+}
+
+.videoDetails__content {
+  @include desktop {
+    display: flex;
+    width: 1232px;
+    margin: 0 auto;
+  }
+}

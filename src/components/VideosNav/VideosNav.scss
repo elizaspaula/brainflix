@@ -17,6 +17,12 @@
     padding: 1rem 1.5rem;
   }
 
+  @include desktop {
+    gap: 19.8rem;
+    width: 1280px;
+    margin: 0 auto;
+  }
+
   &__image {
     width: 100%;
     padding-bottom: 1rem;
@@ -44,6 +50,10 @@
     @include tablet {
       flex: 1;
       padding-bottom: 0;
+    }
+
+    @include desktop {
+      flex: auto;
     }
   }
 

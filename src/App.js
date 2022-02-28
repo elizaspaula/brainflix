@@ -1,10 +1,12 @@
 import React from "react";
 import "./App.css";
 import MainVideo from "./components/MainVideo/MainVideo";
+import TopVideo from "./components/TopVideo/TopVideo";
 import VideoList from "./components/VideosList/VideosList";
 import VideosNav from "./components/VideosNav/VideosNav";
 import videoDetails from "./data/video-details.json";
 import videos from "./data/videos.json";
+import "./components/AppVideos/AppVideos.scss";
 
 function App() {
   //Create useState Hook and initialize videoID
@@ -20,11 +22,12 @@ function App() {
 
   return (
     <div className="App">
-      <body>
-        <VideosNav />
+      <VideosNav />
+      <TopVideo videoDetail={video} />
+      <div className="videoDetails__content">
         <MainVideo videoDetail={video} />
         <VideoList videos={videoList} setSelectVideoId={setSelectVideoId} />
-      </body>
+      </div>
     </div>
   );
 }

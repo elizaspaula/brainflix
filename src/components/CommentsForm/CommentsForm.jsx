@@ -20,7 +20,7 @@ function CommentsForm() {
             name="comment"
             placeholder="Add a new comment"
             cols="30"
-            rows="1"
+            rows="5"
             className="conversations__message"
             autofocus
             required="required"

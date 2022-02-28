@@ -17,6 +17,11 @@
     @include tablet {
       padding-top: 3.4375rem;
       padding-right: 1rem;
+      padding-left: 1.25rem;
+    }
+
+    @include desktop {
+      padding-top: 1.125rem;
     }
   }
 
@@ -38,6 +43,10 @@
 
     @include tablet {
       padding-top: 2.25rem;
+    }
+
+    @include desktop {
+      padding-top: 0;
     }
   }
 
@@ -72,6 +81,10 @@
 
     @include tablet {
       padding: 0;
+    }
+
+    @include desktop {
+      padding-right: 1rem;
     }
   }
 
