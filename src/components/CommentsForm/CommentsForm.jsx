@@ -11,7 +11,7 @@ function CommentsForm() {
       </div>
 
       <div className="conversations__group">
-        <p className="conversations__label" for="message">
+        <p className="conversations__label" htmlFor="message">
           Join the Conversation
         </p>
         <div className="conversations__wrapper">
@@ -22,7 +22,7 @@ function CommentsForm() {
             cols="30"
             rows="5"
             className="conversations__message"
-            autofocus
+            autoFocus
             required="required"
           ></textarea>
           <div className="conversations__btn">

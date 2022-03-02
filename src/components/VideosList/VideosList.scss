@@ -35,13 +35,13 @@
     }
   }
 
-  &__item {
-    display: flex;
-    padding: 0.5rem 0;
-    align-items: center;
-    justify-content: flex-start;
-    gap: 0.625rem;
-  }
+  // &__item {
+  //   display: flex;
+  //   padding: 0.5rem 0;
+  //   align-items: center;
+  //   justify-content: flex-start;
+  //   gap: 0.625rem;
+  // }
 
   &__image {
     width: 100%;
@@ -80,5 +80,15 @@
     width: 7rem;
     height: 4rem;
     cursor: pointer;
+  }
+
+  &__link {
+    text-decoration: none;
+    color: $primary-color;
+    display: flex;
+    padding: 0.5rem 0;
+    align-items: center;
+    justify-content: flex-start;
+    gap: 0.625rem;
   }
 }

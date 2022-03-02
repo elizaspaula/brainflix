@@ -1,4 +1,6 @@
 import "./VideosNav.scss";
+import { Link } from "react-router-dom";
+
 import uploadIcon from "../../assets/icons/upload.svg";
 
 //images
@@ -13,7 +15,9 @@ function VideosNav() {
   return (
     <header className="logo">
       <div className="logo__image">
-        <img className="logo__logo" src={logo} alt="logo" />
+        <Link to={"/video"}>
+          <img className="logo__logo" src={logo} alt="logo" />
+        </Link>
       </div>
       <div className="logo__search">
         <div className="logo__text">
@@ -26,7 +30,7 @@ function VideosNav() {
           />
         </div>
         <div className="logo__button tablet">
-          <Button>
+          <Button to={"/video/upload"}>
             <img className="logo__icon" src={uploadIcon} alt="upload icon" />
             <p className="logo__content">upload</p>
           </Button>
@@ -34,7 +38,7 @@ function VideosNav() {
         <Avatar />
       </div>
       <div className="logo__button mobile">
-        <Button>
+        <Button to={"/video/upload"}>
           <img className="logo__icon" src={uploadIcon} alt="upload icon" />
           <p className="logo__content">upload</p>
         </Button>
