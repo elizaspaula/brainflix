@@ -94,6 +94,10 @@
     width: 85%;
     border-radius: 0.25rem;
 
+    &::-webkit-input-placeholder {
+      color: $primary-color;
+    }
+
     &:focus {
       outline: none;
     }

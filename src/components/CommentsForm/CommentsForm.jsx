@@ -28,7 +28,7 @@ function CommentsForm() {
               <img
                 className="conversations__icon"
                 src={commentIcon}
-                alt="upload icon"
+                alt="comment icon"
               />
               <p className="conversations__content">comment</p>
             </Button>

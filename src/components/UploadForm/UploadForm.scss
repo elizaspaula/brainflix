@@ -1,0 +1,128 @@
+@use "../../styles/partials/mixins" as *;
+@use "../../styles/partials/fonts" as *;
+@use "../../styles/partials/variables" as *;
+@use "../../styles/partials/typography" as *;
+
+* {
+  font-family: $font;
+}
+
+.upload {
+  padding: 1rem;
+  @include divider-top;
+
+  @include tablet {
+    padding: 1rem 1.5rem;
+  }
+
+  @include desktop {
+    width: 1280px;
+    margin: 0 auto;
+  }
+
+  &__title {
+    color: $primary-color;
+    text-align: left;
+    font-weight: $demi;
+
+    @include tablet {
+      padding-bottom: 1.5rem;
+    }
+  }
+
+  &__wrapper {
+    @include tablet {
+      @include divider-top;
+      @include divider-bottom;
+      padding-bottom: 1.5rem;
+    }
+
+    @include desktop {
+      display: flex;
+      align-items: center;
+      justify-content: flex-start;
+      gap: 1.5rem;
+    }
+  }
+
+  &__group {
+    padding-top: 2.8125rem;
+  }
+
+  &__label {
+    text-align: left;
+    color: #afafaf;
+    text-transform: uppercase;
+    padding-bottom: 0.3125rem;
+    padding-top: 1.5rem;
+    font-size: 0.8125rem;
+    font-weight: 600;
+  }
+
+  &__video {
+    height: 10rem;
+
+    @include tablet {
+      height: 14rem;
+      text-align: left;
+    }
+  }
+
+  &__video-preview {
+    height: 100%;
+    max-width: 100%;
+    object-fit: cover;
+    border-radius: 0.25rem;
+  }
+
+  &__video-title {
+    @include textarea;
+  }
+
+  &__video-description {
+    @include textarea;
+  }
+
+  &__upload-btn {
+    padding-top: 1.5rem;
+
+    @include tablet {
+      display: flex;
+      justify-content: flex-end;
+    }
+  }
+
+  &__cancel-btn {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding-top: 0.5rem;
+
+    @include tablet {
+      padding-top: 0;
+      padding-right: 2rem;
+      order: -1;
+    }
+  }
+
+  &__cancel {
+    font-size: 12px;
+    text-decoration: none;
+    border: none;
+    text-transform: uppercase;
+    font-weight: $demi;
+    background-color: white;
+    color: $primary-color-btn;
+    cursor: pointer;
+    width: 100%;
+    height: 2.5rem;
+  }
+
+  &__icon {
+    flex-basis: 1rem;
+  }
+  &__content-btn {
+    flex-grow: 1;
+    font-weight: 600;
+  }
+}
