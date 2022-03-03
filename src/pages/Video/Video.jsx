@@ -8,8 +8,8 @@ const apiKey = "a9175e1c-dee7-45ad-88aa-6fb8332c5712";
 
 class Video extends Component {
   state = {
-    selectedVideo: null, //initial data from JSON file
-    videos: [], // initial data from JSON file
+    selectedVideo: null,
+    videos: [],
   };
 
   componentDidMount() {
@@ -52,7 +52,7 @@ class Video extends Component {
 
   render() {
     const videoList =
-      //
+      // (condition) ? 'if condition is true' : 'if condition is false'
       this.state.selectedVideo === null
         ? []
         : this.state.videos.filter(

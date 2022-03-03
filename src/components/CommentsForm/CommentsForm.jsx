@@ -11,9 +11,7 @@ function CommentsForm() {
       </div>
 
       <div className="conversations__group">
-        <p className="conversations__label" htmlFor="message">
-          Join the Conversation
-        </p>
+        <p className="conversations__label">Join the Conversation</p>
         <div className="conversations__wrapper">
           <textarea
             id="message"
