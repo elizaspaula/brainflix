@@ -119,6 +119,10 @@
     }
   }
 
+  &__description-content {
+    text-align: left;
+  }
+
   &__comments {
     text-align: left;
     font-weight: $demi;

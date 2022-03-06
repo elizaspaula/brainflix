@@ -36,3 +36,20 @@
 @mixin divider-bottom {
   border-bottom: 1px solid $secondary-color-neutral;
 }
+
+@mixin textarea {
+  display: block;
+  font-family: "Avenir Next", Arial, sans-serif;
+  font-size: 0.8125rem;
+  color: $secondary-color;
+  background-color: $secondary-color-background;
+  border-radius: 0.25rem;
+  padding: 0.75rem;
+  border: 1px solid $secondary-color-neutral;
+  transition: background-color 0.5s ease-out;
+  width: 100%;
+
+  &::-webkit-input-placeholder {
+    color: $primary-color;
+  }
+}

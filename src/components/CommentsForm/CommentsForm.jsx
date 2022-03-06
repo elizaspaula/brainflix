@@ -11,9 +11,7 @@ function CommentsForm() {
       </div>
 
       <div className="conversations__group">
-        <p className="conversations__label" for="message">
-          Join the Conversation
-        </p>
+        <p className="conversations__label">Join the Conversation</p>
         <div className="conversations__wrapper">
           <textarea
             id="message"
@@ -22,7 +20,7 @@ function CommentsForm() {
             cols="30"
             rows="5"
             className="conversations__message"
-            autofocus
+            autoFocus
             required="required"
           ></textarea>
           <div className="conversations__btn">
@@ -30,7 +28,7 @@ function CommentsForm() {
               <img
                 className="conversations__icon"
                 src={commentIcon}
-                alt="upload icon"
+                alt="comment icon"
               />
               <p className="conversations__content">comment</p>
             </Button>
