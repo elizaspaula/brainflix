@@ -42,7 +42,9 @@ function MainVideo({ videoDetail }) {
             </div>
           </div>
           <div className="video__description">
-            <p>{videoDetail.description}</p>
+            <p className="video__description-content">
+              {videoDetail.description}
+            </p>
           </div>
           <h3 className="video__comments">
             {videoDetail.comments.length} Comments{" "}

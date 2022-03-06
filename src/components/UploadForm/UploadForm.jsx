@@ -2,13 +2,19 @@ import Button from "../Button/Button";
 import publishIcon from "../../assets/icons/publish.svg";
 import uploadPreview from "../../assets/images/Upload-video-preview.jpg";
 import "./UploadForm.scss";
+import { useHistory } from "react-router-dom";
+
+function sayAlert() {
+  alert("Your video is being uploaded!");
+}
 
 function UploadForm() {
+  let history = useHistory();
+
   return (
     <div className="upload">
       <h1 className="upload__title">Upload Video</h1>
       <div className="upload__wrapper">
-        {/* <p className="upload__label">video thumbnail</p> */}
         <div className="upload__video">
           <p className="upload__label">video thumbnail</p>
           <img
@@ -43,10 +49,16 @@ function UploadForm() {
         </div>
       </div>
       <div className="upload__upload-btn">
-        <Button>
+        <Button
+          onClick={() => {
+            sayAlert();
+            history.push("/video");
+          }}
+        >
           <img className="upload__icon" src={publishIcon} alt="upload icon" />
           <p className="upload__content-btn">publish</p>
         </Button>
+
         <div className="upload__cancel-btn">
           <button className="upload__cancel">Cancel</button>
         </div>
