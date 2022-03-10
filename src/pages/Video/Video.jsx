@@ -4,7 +4,7 @@ import VideoList from "../../components/VideosList/VideosList";
 import React, { Component } from "react";
 import axios from "axios";
 
-const apiKey = "a9175e1c-dee7-45ad-88aa-6fb8332c5712";
+// const apiKey = "a9175e1c-dee7-45ad-88aa-6fb8332c5712";
 
 class Video extends Component {
   state = {
@@ -30,7 +30,7 @@ class Video extends Component {
   //  GET /videos from API
   getAllVideos() {
     return axios
-      .get(` https://project-2-api.herokuapp.com/videos?api_key=${apiKey}`)
+      .get(`/videos`)
       .then((response) => {
         this.setState({
           videos: response.data,
@@ -45,9 +45,7 @@ class Video extends Component {
   }
 
   getVideoDetails(id) {
-    return axios.get(
-      `https://project-2-api.herokuapp.com/videos/${id}?api_key=${apiKey}`
-    );
+    return axios.get(`/videos/${id}`);
   }
 
   render() {

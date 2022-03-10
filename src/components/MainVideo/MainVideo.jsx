@@ -7,6 +7,8 @@ import CommentsForm from "../CommentsForm/CommentsForm";
 import CommentList from "../CommentList/CommentList";
 
 function MainVideo({ videoDetail }) {
+  console.log(videoDetail.id);
+
   return (
     <>
       <main className="video">
