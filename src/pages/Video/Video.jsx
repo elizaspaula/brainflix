@@ -4,8 +4,6 @@ import VideoList from "../../components/VideosList/VideosList";
 import React, { Component } from "react";
 import axios from "axios";
 
-// const apiKey = "a9175e1c-dee7-45ad-88aa-6fb8332c5712";
-
 class Video extends Component {
   state = {
     selectedVideo: null,
@@ -13,12 +11,12 @@ class Video extends Component {
   };
 
   componentDidMount() {
-    this.getAllVideos();
+    this.getAllVideos(this.props.match.params.videoId);
   }
 
   componentDidUpdate(prevProps, prevState) {
     let videoId = this.props.match.params.videoId;
-    if (videoId !== prevProps.match.params.videoId) {
+    if (videoId && videoId !== prevProps.match.params.videoId) {
       this.getVideoDetails(videoId).then((response) => {
         this.setState({
           selectedVideo: response.data,
@@ -28,14 +26,14 @@ class Video extends Component {
   }
 
   //  GET /videos from API
-  getAllVideos() {
+  getAllVideos(selectedId) {
     return axios
       .get(`/videos`)
       .then((response) => {
         this.setState({
           videos: response.data,
         });
-        return this.getVideoDetails(response.data[0].id);
+        return this.getVideoDetails(selectedId || response.data[0].id);
       })
       .then((response) => {
         this.setState({
@@ -57,7 +55,7 @@ class Video extends Component {
             (video) => video.id !== this.state.selectedVideo.id
           );
 
-    return this.state.selectedVideo === null ? null : (
+    return !this.state.selectedVideo ? null : (
       <>
         <TopVideo videoDetail={this.state.selectedVideo} />
         <div className="videoDetails__content">

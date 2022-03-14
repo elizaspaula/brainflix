@@ -7,8 +7,6 @@ import CommentsForm from "../CommentsForm/CommentsForm";
 import CommentList from "../CommentList/CommentList";
 
 function MainVideo({ videoDetail }) {
-  console.log(videoDetail.id);
-
   return (
     <>
       <main className="video">
@@ -49,7 +47,7 @@ function MainVideo({ videoDetail }) {
             </p>
           </div>
           <h3 className="video__comments">
-            {videoDetail.comments.length} Comments{" "}
+            {videoDetail.comments.length} Comments
           </h3>
           <CommentsForm />
           <CommentList comments={videoDetail.comments} />

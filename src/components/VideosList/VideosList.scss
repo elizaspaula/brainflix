@@ -3,10 +3,6 @@
 @use "../../styles/partials/variables" as *;
 @use "../../styles/partials/typography" as *;
 
-* {
-  font-family: $font;
-}
-
 .videos {
   padding: 0 1rem;
   padding-bottom: 1rem;
@@ -34,14 +30,6 @@
       padding-bottom: 1.5rem;
     }
   }
-
-  // &__item {
-  //   display: flex;
-  //   padding: 0.5rem 0;
-  //   align-items: center;
-  //   justify-content: flex-start;
-  //   gap: 0.625rem;
-  // }
 
   &__image {
     width: 100%;

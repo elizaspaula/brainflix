@@ -3,10 +3,6 @@
 @use "../../styles/partials/variables" as *;
 @use "../../styles/partials/typography" as *;
 
-* {
-  font-family: $font;
-}
-
 .upload {
   padding: 1rem;
   @include divider-top;
@@ -93,10 +89,12 @@
 
   &__video-title {
     @include textarea;
+    height: 2.5rem;
   }
 
   &__video-description {
     @include textarea;
+    height: 9.375rem;
   }
 
   &__upload-btn {
@@ -132,6 +130,7 @@
     cursor: pointer;
     width: 100%;
     height: 2.5rem;
+    padding-top: 12px;
   }
 
   &__icon {

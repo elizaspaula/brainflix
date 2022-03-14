@@ -3,10 +3,6 @@
 @use "../../styles/partials/variables" as *;
 @use "../../styles/partials/typography" as *;
 
-* {
-  font-family: $font;
-}
-
 .player {
   background-color: $secondary-color;
 

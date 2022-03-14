@@ -48,6 +48,12 @@
   border: 1px solid $secondary-color-neutral;
   transition: background-color 0.5s ease-out;
   width: 100%;
+  resize: none;
+
+  &:focus {
+    outline: none !important;
+    border-color: $primary-color-btn;
+  }
 
   &::-webkit-input-placeholder {
     color: $primary-color;

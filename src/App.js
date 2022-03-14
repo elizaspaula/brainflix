@@ -13,6 +13,7 @@ function App() {
         <VideosNav />
         <Switch>
           <Route path="/video" exact component={Video} />
+          <Route path="/" exact component={Video} />
           <Route path="/video/upload" exact component={Upload} />
           <Route path="/video/:videoId" component={Video} />
         </Switch>
