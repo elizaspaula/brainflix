@@ -49,6 +49,7 @@ class Video extends Component {
   render() {
     const videoList =
       // (condition) ? 'if condition is true' : 'if condition is false'
+      //fix
       this.state.selectedVideo === null
         ? []
         : this.state.videos.filter(
