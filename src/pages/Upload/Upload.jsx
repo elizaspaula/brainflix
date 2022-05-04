@@ -19,7 +19,7 @@ class Upload extends Component {
     //post data to API Server
 
     axios
-      .post("http://localhost:8080/videos", {
+      .post(`${process.env.REACT_APP_API_URL}/videos`, {
         title: videoTitle,
         description: videoDescription,
       })

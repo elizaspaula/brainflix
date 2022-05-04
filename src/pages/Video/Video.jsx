@@ -28,7 +28,7 @@ class Video extends Component {
   //  GET /videos from API
   getAllVideos(selectedId) {
     return axios
-      .get(`/videos`)
+      .get(`${process.env.REACT_APP_API_URL}/videos`)
       .then((response) => {
         this.setState({
           videos: response.data,
@@ -43,7 +43,7 @@ class Video extends Component {
   }
 
   getVideoDetails(id) {
-    return axios.get(`/videos/${id}`);
+    return axios.get(`${process.env.REACT_APP_API_URL}/videos/${id}`);
   }
 
   render() {
